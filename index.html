@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="1000021988-removebg-preview.png" alt="Company Logo">
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#order">How To Order</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                // Toggle active class
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a nav link (mobile)
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    if (hamburger.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="water-pe">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+   .water-pe {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        position: relative;
+        height: 100vh;
+        background: url('water.gif') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+
+    .hero:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,171,171,0.7) 0%, rgba(79,56,163,0.7) 100%);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin-bottom: 100px; /* Added space to prevent overlap with larger waves */
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        background: white;
+        color: rgb(71, 109, 151);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Enhanced Wave effect */
+    .wave-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 250px; /* Increased height for more prominent waves */
+        overflow: hidden;
+    }
+
+    .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-repeat: repeat-x;
+        transform-origin: center bottom;
+    }
+
+    .wave1 {
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 C300,20 450,180 600,100 C750,20 900,180 1200,100 v200 h-1200 Z" style="fill: rgba(255,255,255,0.7);"/></svg>');
+        background-size: 1200px 300px; /* Larger SVG size */
+        opacity: 0.7;
+        animation: wave 18s linear infinite;
+        height: 110%;
+    }
+
+    .wave2 {
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 C150,220 450,60 600,120 C750,180 950,80 1200,120 v180 h-1200 Z" style="fill: rgba(255,255,255,0.8);"/></svg>');
+        background-size: 1200px 300px;
+        opacity: 0.8;
+        animation: wave 13s linear infinite;
+        height: 100%;
+    }
+
+    .wave3 {
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg"><path d="M0,120 C150,180 350,60 500,120 C650,180 750,80 950,120 C1050,150 1200,100 1200,120 v180 h-1200 Z" style="fill: white;"/></svg>');
+        background-size: 1200px 300px;
+        opacity: 1;
+        animation: wave 9s linear infinite;
+        height: 80%;
+    }
+
+    @keyframes wave {
+        0% {
+            transform: translateX(0) translateY(7px);
+        }
+        50% {
+            transform: translateX(-25%) translateY(0);
+        }
+        100% {
+            transform: translateX(-50%) translateY(5px);
+        }
+    }
+
+    .services {
+        padding: 60px 20px;
+        text-align: center;
+        background-color: white;
+    }
+
+    .services h2 {
+        color: rgb(71, 109, 151);
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .services p {
+        color: #666;
+        margin-bottom: 40px;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-item {
+        background: linear-gradient(to right, #00ABA9, rgb(133, 162, 195));
+        height: 10px;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        .hero-content {
+            margin-bottom: 60px;
+        }
+        
+        .wave-container {
+            height: 150px;
+        }
+    }
+</style>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>PE <span style="color:rgb(133, 162, 195);">WATER</span> </h1>
+        <p>Fancy doing something a little different? The Easiest & Cost Effective way to get water delivery in Las Vegas or Summerlin!</p>
+        <div class="buttons">
+            <a href="#" class="btn btn-primary">Start Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+    </div>
+    
+    <div class="wave-container">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+</section>
+
+<section class="services">
+    <h2>Our Popular Services</h2>
+    <p>Fancy doing something a little different? The Easiest & Cost Effective way to get water delivery in Las Vegas or Summerlin!</p>
+    
+    
+</section>
+
+<script>
+    // This script enhances the wave animation by making it pause when not in view
+    const waveContainer = document.querySelector('.wave-container');
+    const waves = document.querySelectorAll('.wave');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                waves.forEach(wave => {
+                    wave.style.animationPlayState = 'running';
+                });
+            } else {
+                waves.forEach(wave => {
+                    wave.style.animationPlayState = 'paused';
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    observer.observe(waveContainer);
+</script>
+</main>
+
+
+
+
+
+
+
+<style>
+
+    
+    .pe-water-about {
+        background-color: #f5f9fa;
+        padding: 20px;
+    }
+    
+    .first-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 30px 20px;
+        width: calc(50% - 20px);
+        min-width: 250px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .icon-wrapper {
+        background-color: #00d2e6;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .icon {
+        color: white;
+        font-size: 32px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    
+    .card-text {
+        color: #777;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .divider {
+        width: 60px;
+        height: 2px;
+        background-color: #00d2e6;
+        margin-top: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .card {
+            width: 100%;
+        }
+    }
+</style>
+<div class="pe-water-about">
+<div class="first-container">
+    <!-- Bulk Water Supply Card -->
+    <div class="card">
+        <div class="icon-wrapper">
+            <i class="icon fas fa-water"></i>
+        </div>
+        <h3 class="card-title">Bulk Water Supply</h3>
+        <p class="card-text">Reliable bulk water supply services for businesses, construction sites, and events throughout Port Elizabeth and surrounding areas.</p>
+        <div class="divider"></div>
+    </div>
+    
+    <!-- Non-Potable Water Card -->
+    <div class="card">
+        <div class="icon-wrapper">
+            <i class="icon fas fa-tint-slash"></i>
+        </div>
+        <h3 class="card-title">Non-Potable Water</h3>
+        <p class="card-text">Affordable non-potable water solutions for industrial use, irrigation, construction, and other applications not requiring drinking water.</p>
+        <div class="divider"></div>
+    </div>
+    
+    <!-- Water Transport Service Card -->
+    <div class="card">
+        <div class="icon-wrapper">
+            <i class="icon fas fa-truck"></i>
+        </div>
+        <h3 class="card-title">Water Transport</h3>
+        <p class="card-text">Efficient water delivery services with our specialized fleet of tankers, ensuring timely delivery to any location in the PE region.</p>
+        <div class="divider"></div>
+    </div>
+    
+    <!-- Water Quality Testing Card -->
+    <div class="card">
+        <div class="icon-wrapper">
+            <i class="icon fas fa-flask"></i>
+        </div>
+        <h3 class="card-title">Quality Assurance</h3>
+        <p class="card-text">Regular testing and monitoring to ensure our water meets the required standards for your specific industrial or commercial needs.</p>
+        <div class="divider"></div>
+    </div>
+</div>
+</div>
+
+
+
+<div class="third-water">
+
+
+        <style>
+      
+            
+            .main-container {
+                display: flex;
+                flex-direction: row;
+                min-height: 100vh;
+                width: 100%;
+            }
+            
+            .image-column {
+                flex: 1;
+                position: relative;
+                background-image: url('watertank.webp');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .image-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(0,150,199,0.85) 0%, rgba(0,83,138,0.9) 100%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 40px;
+                text-align: center;
+            }
+            
+            .overlay-content {
+                max-width: 500px;
+                color: white;
+            }
+            
+            .overlay-content h1 {
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+                font-weight: 700;
+                text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                letter-spacing: 1px;
+            }
+            
+            .overlay-content p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+                margin-bottom: 30px;
+                font-weight: 300;
+            }
+            
+            .water-drop {
+                position: absolute;
+                opacity: 0.1;
+                font-size: 15rem;
+                bottom: -50px;
+                right: -50px;
+                transform: rotate(15deg);
+                color: white;
+            }
+            
+            .info-column {
+                flex: 1;
+                background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+                padding: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .info-box {
+                background: white;
+                border-radius: 20px;
+                padding: 40px;
+                box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .box-header {
+                position: relative;
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #eaeaea;
+            }
+            
+            .info-title {
+                display: flex;
+                align-items: center;
+            }
+            
+            .info-icon {
+                background: linear-gradient(135deg, #00d2e6 0%, #0088cc 100%);
+                width: 60px;
+                height: 60px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+                box-shadow: 0 10px 20px rgba(0,210,230,0.2);
+            }
+            
+            .info-icon i {
+                color: white;
+                font-size: 24px;
+            }
+            
+            .info-title h2 {
+                font-size: 1.8rem;
+                color: #333;
+                font-weight: 600;
+            }
+            
+            .info-subtitle {
+                margin-top: 20px;
+                font-size: 1.2rem;
+                color: #555;
+                font-weight: 500;
+            }
+            
+            .pricing-list {
+                list-style: none;
+                margin-bottom: 40px;
+                background: #f8fcfd;
+                border-radius: 15px;
+                padding: 25px;
+            }
+            
+            .pricing-item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+                border-bottom: 1px dashed #ddd;
+                transition: transform 0.3s ease;
+            }
+            
+            .pricing-item:hover {
+                transform: translateX(10px);
+            }
+            
+            .pricing-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            .pricing-volume {
+                font-weight: 600;
+                color: #333;
+                display: flex;
+                align-items: center;
+            }
+            
+            .pricing-volume:before {
+                content: '\f043';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                margin-right: 10px;
+                color: #00d2e6;
+            }
+            
+            .pricing-details {
+                text-align: right;
+            }
+            
+            .pricing-cost {
+                font-weight: 700;
+                color: #00d2e6;
+                font-size: 1.2rem;
+                display: block;
+            }
+            
+            .pricing-rate {
+                font-size: 0.9rem;
+                color: #777;
+                display: block;
+                margin-top: 5px;
+            }
+            
+            .place-order-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, #00d2e6 0%, #0088cc 100%);
+                color: white;
+                border: none;
+                padding: 16px 30px;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 20px rgba(0,210,230,0.2);
+                width: 100%;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .place-order-btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 25px rgba(0,210,230,0.3);
+            }
+            
+            .place-order-btn i {
+                margin-right: 10px;
+                font-size: 1.2rem;
+            }
+            
+            .water-badge {
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                background: linear-gradient(135deg, #ff6b6b 0%, #e63946 100%);
+                color: white;
+                border-radius: 50%;
+                width: 90px;
+                height: 90px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                font-size: 0.9rem;
+                text-align: center;
+                transform: rotate(15deg);
+                box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+                text-transform: uppercase;
+                line-height: 1.2;
+            }
+            
+            .water-emblem {
+                position: absolute;
+                bottom: -20px;
+                left: -20px;
+                width: 120px;
+                height: 120px;
+                background-color: rgba(0,210,230,0.05);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 0;
+            }
+            
+            .water-emblem i {
+                font-size: 50px;
+                color: rgba(0,210,230,0.1);
+            }
+            
+            @media (max-width: 992px) {
+                .main-container {
+                    flex-direction: column;
+                }
+                
+                .image-column, .info-column {
+                    width: 100%;
+                }
+                
+                .image-column {
+                    min-height: 400px;
+                }
+                
+                .info-column {
+                    padding: 40px 20px;
+                }
+                
+                .info-box {
+                    padding: 30px 20px;
+                }
+                
+                .overlay-content h1 {
+                    font-size: 2.5rem;
+                }
+            }
+        </style>
+
+        <div class="main-container">
+            <!-- Image Column with Fixed Attachment -->
+            <div class="image-column">
+                <div class="image-overlay">
+                    <div class="overlay-content">
+                        <h1>PE WATER</h1>
+                        <p>Your reliable partner for bulk water delivery services in Port Elizabeth and surrounding areas. We provide high-quality non-potable water for industrial, construction, and agricultural needs.</p>
+                    </div>
+                    <i class="fas fa-tint water-drop"></i>
+                </div>
+            </div>
+            
+            <!-- Information Column -->
+            <div class="info-column">
+                <div class="info-box">
+                    <div class="water-badge">Non-Potable Water</div>
+                    <div class="box-header">
+                        <div class="info-title">
+                            <div class="info-icon">
+                                <i class="fas fa-truck-container"></i>
+                            </div>
+                            <h2>BULK WATER DELIVERY</h2>
+                        </div>
+                        <p class="info-subtitle">Minimum orders for PE area's</p>
+                    </div>
+                    
+                    <ul class="pricing-list">
+                        <li class="pricing-item">
+                            <span class="pricing-volume">2000L order</span>
+                            <div class="pricing-details">
+                                <span class="pricing-cost">R400</span>
+                                <span class="pricing-rate">(R200/1000L)</span>
+                            </div>
+                        </li>
+                        <li class="pricing-item">
+                            <span class="pricing-volume">3000L order</span>
+                            <div class="pricing-details">
+                                <span class="pricing-cost">R550</span>
+                                <span class="pricing-rate">(R180/1000L)</span>
+                            </div>
+                        </li>
+                        <li class="pricing-item">
+                            <span class="pricing-volume">4000L order</span>
+                            <div class="pricing-details">
+                                <span class="pricing-cost">R700</span>
+                                <span class="pricing-rate">(R175/1000L)</span>
+                            </div>
+                        </li>
+                        <li class="pricing-item">
+                            <span class="pricing-volume">5000L order</span>
+                            <div class="pricing-details">
+                                <span class="pricing-cost">R800</span>
+                                <span class="pricing-rate">(R160/1000L)</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <button class="place-order-btn">
+                        <i class="fas fa-cart-plus"></i>
+                        Place Order
+                    </button>
+                    
+                    <div class="water-emblem">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="fix-water"></div>
+
+<style>
+    :root {
+        --primary: #1E88E5;
+        --secondary: #0D47A1;
+        --light-blue: #64B5F6;
+        --white: #fff;
+    }
+    
+
+    
+    .fix-water {
+        background-color: #f5f5f5;
+        padding: 15px;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, var(--light-blue) 0%, var(--primary) 100%);
+        border-radius: 2px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .wave-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+        transform: scaleX(1.5);
+    }
+    
+    .header {
+        text-align: center;
+        color: var(--white);
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .header p {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+    
+    .card {
+        background-color: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        position: relative;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--primary), var(--light-blue));
+    }
+    
+    .card-image {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+    }
+    
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .card:hover .card-image img {
+        transform: scale(1.05);
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .card-icon {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        color: var(--primary);
+    }
+    
+    .card-icon i {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+    
+    .card-title {
+        color: var(--secondary);
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        position: relative;
+        padding-bottom: 8px;
+    }
+    
+    .card-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary);
+    }
+    
+    .card-text {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+
+    
+    .feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        color: #444;
+    }
+    
+    .feature i {
+        color: var(--primary);
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .feature-highlight {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(30, 136, 229, 0.1);
+        padding: 10px;
+        border-radius: 2px;
+        color: var(--secondary);
+        font-weight: 600;
+    }
+    
+    .feature-highlight i {
+        margin-right: 10px;
+        font-size: 1.2rem;
+        color: var(--primary);
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+        }
+        
+        .card-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="wave-header"></div>
+    
+    <div class="header">
+        <h1>Premium Water Supply Services</h1>
+        <p>Reliable, punctual, and professional bulk water delivery for all your non-potable water needs</p>
+    </div>
+    
+    <div class="card-container">
+        <div class="card">
+            <div class="card-image">
+                <img src="water1.webp" alt="Bulk Water Supply">
+            </div>
+            <div class="card-content">
+                <div class="card-icon">
+                    <i class="fas fa-truck"></i>
+                    <h2 class="card-title">Bulk Water Supply</h2>
+                </div>
+                <p class="card-text">We deliver large volumes of water when and where you need it. Our fleet of modern tankers ensures consistent supply for construction sites, industrial facilities, and agricultural operations.</p>
+    
+                <div class="feature-highlight">
+                    <i class="fas fa-clock"></i>
+                    <span>On-time delivery guarantee or 10% off your next order</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image">
+                <img src="deliverytruck.webp" alt="Non-Potable Water">
+            </div>
+            <div class="card-content">
+                <div class="card-icon">
+                    <i class="fas fa-water"></i>
+                    <h2 class="card-title">Non-Potable Water</h2>
+                </div>
+                <p class="card-text">Specialized non-potable water for industrial use, dust control, irrigation, and more. Our water is sourced responsibly and delivered efficiently to minimize your environmental impact.</p>
+    
+                <div class="feature-highlight">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>Consistent quality with every delivery, guaranteed</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image">
+                <img src="pourwater.webp" alt="Bulk Water Delivery">
+            </div>
+            <div class="card-content">
+                <div class="card-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h2 class="card-title">Bulk Water Delivery</h2>
+                </div>
+                <p class="card-text">Our punctual delivery service is trusted by businesses across the region. With advanced scheduling systems and GPS-tracked vehicles, we ensure your water arrives exactly when promised.</p>
+     
+                <div class="feature-highlight">
+                    <i class="fas fa-star"></i>
+                    <span>Average arrival time within 15 minutes of schedule</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image">
+                <img src="water2.webp" alt="Swimming Pool Water">
+            </div>
+            <div class="card-content">
+                <div class="card-icon">
+                    <i class="fas fa-swimming-pool"></i>
+                    <h2 class="card-title">Swimming Pool Services</h2>
+                </div>
+                <p class="card-text">Keep your swimming pool filled and ready for use with our specialized pool water delivery service. Ideal for new pool filling, pool top-ups, or refreshing existing water.</p>
+      
+                <div class="feature-highlight">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Get your pool ready for swimming in just one day!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
