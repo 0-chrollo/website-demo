@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navigation</title>
+    <title>Port Elizabeth Bulk Water Supply | Non-potable Water | website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -20,8 +21,8 @@
         </div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#order">How To Order</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#orders">Place an Order</a></li>
+            <li><a href="#contact">Contact us</a></li>
         </ul>
     </nav>
     <script>
@@ -265,8 +266,8 @@
         <h1>PE <span style="color:rgb(133, 162, 195);">WATER</span> </h1>
         <p>Fancy doing something a little different? The Easiest & Cost Effective way to get water delivery in Las Vegas or Summerlin!</p>
         <div class="buttons">
-            <a href="#" class="btn btn-primary">Start Now</a>
-            <a href="#" class="btn btn-secondary">Learn More</a>
+            <a href="#orders" class="btn btn-primary">Start Now</a>
+            <a href="#footer" class="btn btn-secondary">Learn More</a>
         </div>
     </div>
     
@@ -391,7 +392,8 @@
         }
     }
 </style>
-<div class="pe-water-about">
+<p id="services"></p>
+<div class="pe-water-about" >
 <div class="first-container">
     <!-- Bulk Water Supply Card -->
     <div class="card">
@@ -722,7 +724,7 @@
                 }
             }
         </style>
-
+<p id="orders"></p>
         <div class="main-container">
             <!-- Image Column with Fixed Attachment -->
             <div class="image-column">
@@ -1079,6 +1081,237 @@
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+    .footer {
+      background: linear-gradient(135deg, rgb(219, 230, 242), rgb(213, 227, 242), rgb(255, 255, 255));
+      color: rgb(71, 109, 151);
+      padding: 60px 0 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+     
+      z-index: 1;
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 40px;
+      padding: 0 15px;
+    }
+
+    .fot {
+      font-size: 22px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      border-bottom: 2px solid rgb(38, 75, 117);
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    .about p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .contact-details {
+      margin-bottom: 20px;
+    }
+
+    .contact-details p {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-details p i {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .socials {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: rgb(71, 109, 151);
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .socials a:hover {
+      background-color: rgb(6, 40, 79);
+      transform: translateY(-5px);
+    }
+
+    .map-container {
+      height: 250px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .links ul {
+      list-style: none;
+    }
+
+    .links ul li {
+      margin-bottom: 12px;
+    }
+
+    .links ul li a {
+      color: rgb(71, 109, 151);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+      padding: 5px 0;
+    }
+
+    .links ul li a:hover {
+      color: rgb(17, 51, 90);
+      padding-left: 10px;
+    }
+
+    .newsletter p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .newsletter form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .newsletter input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 12px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+
+    
+
+    .footer-bottom {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .footer-section {
+        flex: 100%;
+      }
+    }
+
+    .facebook-icon {
+      fill: rgb(11, 49, 92);
+    }
+  </style>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3 class="fot">About Us</h3>
+        <p>We are a leading Bulk Water Supply company based in Port Elizabeth. Our mission is to provide exceptional bulk water delivery services  to our valued customers.</p>
+        <div class="contact-details">
+          <p><i>📱</i> +27 71 558 5738</p>
+      
+        </div>
+        <div class="socials">
+          <a href="#">
+            <svg class="facebook-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+          </a>
+         
+        </div>
+      </div>
+      
+      <div class="footer-section links">
+        <h3class="fot" >Quick Links</h3>
+        <ul>
+      
+          <li><a href="#services">Services</a></li>
+          
+    
+         
+        </ul>
+      </div>
+      
+
+      
+      <div class="footer-section map">
+        <h3 class="fot">Find Us</h3>
+        <div class="map-container">
+          <iframe src="/api/placeholder/400/250" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 PE WATER | All Rights Reserved </p>
+    </div>
+  </footer>
 
 
 </body>
